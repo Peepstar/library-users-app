@@ -21,7 +21,7 @@ target/
 /out/
 
 ### NetBeans ###
-/nbproject/private/
+/nbproject/private/ff
 /nbbuild/
 /dist/
 /nbdist/
