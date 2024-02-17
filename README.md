@@ -23,11 +23,11 @@
 <br />
 <div align="center">
   <a href="https://github.com/PeepStar/library-users-app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/Peepstar/library-users-app/assets/75828460/ea07d504-ee7f-4d26-8da1-6b9dcfd9bd22" alt="Logo" width="300" height="300">
   </a>
 
-<h3 align="center">Library Users REST API</h3>
-
+<h1 align="center">Library Users REST API</h1>
+  
   <p align="center">
     REST API powered by Spring Boot and PostgreSQL for retrieving library users
     <br />
@@ -75,7 +75,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-PENDING TO UPDATE
+A refined REST API crafted for seamless user management. Engineered for scalability and simplicity in every interaction.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,14 +83,13 @@ PENDING TO UPDATE
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![SpringBoot][SpringBoot.java]][SpringBoot-url]
+* [![Java][Java.java]][Java-url]
+* [![PostgreSQL][PostgreSQL.sql]][PostgreSQL-url]
+* [![Hibernate][Hibernate.java]][Hibernate-url]
+* [![MapStruct][MapStruct.com]][MapStruct-url]
+* [![Maven][Maven.com]][Maven-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,19 +218,16 @@ Project Link: [https://github.com/PeepStar/library-users-app](https://github.com
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/julian-peña-java
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[SpringBoot.java]: https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=Spring&logoColor=white
+[SpringBoot-url]: https://spring.io/projects/spring-boot
+[Java.java]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
+[Java-url]: https://www.java.com/es/
+[PostgreSQL.sql]: https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-url]: https://www.postgresql.org/
+[Hibernate.java]: https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white
+[Hibernate-url]: https://hibernate.org/
+[MapStruct.com]: https://img.shields.io/badge/Map_Struct-blue%20?style=for-the-badge
+[MapStruct-url]: https://mapstruct.org/
+[Maven.com]: https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white
+[Maven-url]: https://maven.apache.org/
+
