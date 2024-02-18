@@ -1,30 +1,12 @@
 <a name="readme-top"></a>
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/PeepStar/library-users-app">
-    <img src="https://github.com/Peepstar/library-users-app/assets/75828460/ea07d504-ee7f-4d26-8da1-6b9dcfd9bd22" alt="Logo" width="300" height="300">
-  </a>
 
 <h1 align="center">Library Users REST API</h1>
   
@@ -62,7 +44,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -72,8 +53,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 A refined REST API crafted for seamless user management. Engineered for scalability and simplicity in every interaction.
 
@@ -172,19 +151,11 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - julianpr8@hotmail.com
+Julian David Peña Rojas - julianpr8@hotmail.com
 
 Project Link: [https://github.com/PeepStar/library-users-app](https://github.com/PeepStar/library-users-app)
 
@@ -213,8 +184,6 @@ Project Link: [https://github.com/PeepStar/library-users-app](https://github.com
 [stars-url]: https://github.com/PeepStar/library-users-app/stargazers
 [issues-shield]: https://img.shields.io/github/issues/PeepStar/library-users-app.svg?style=for-the-badge
 [issues-url]: https://github.com/PeepStar/library-users-app/issues
-[license-shield]: https://img.shields.io/github/license/PeepStar/library-users-app.svg?style=for-the-badge
-[license-url]: https://github.com/PeepStar/library-users-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/julian-peña-java
 [product-screenshot]: images/screenshot.png
