@@ -77,32 +77,59 @@ A refined REST API crafted for seamless user management. Engineered for scalabil
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This guide will help you set up and run the REST API locally on your machine.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
+**1. Java 17 or higher**
+- Before you begin, you should check your current Java installation by using the following command:
+  
+ For Windows:
+   ```bash
+   java --version
+   ```
+ For Linux:
+   ```bash
+  $ java -version
+   ```
+
+**2. Maven**
+
+- Compatible with Apache Maven 3.8.1 or later. If you do not already have Maven installed, you can follow the instructions at [maven.apache.org](https://maven.apache.org/download.cgi/).
+
+**3. PostgreSQL**
+- If you do not already have PostgreSQL installed, you can follow the instructions at [postgresql.org](https://www.postgresql.org/download/).
+
+
+### Steps to Setup
+
+**1. Clone the repo**
+   
+   ```bash
+   git clone https://github.com/Peepstar/library-users-app.git
+   ```
+
+**2. Create PostgreSQL Database**
+
+- Open your PostgreSQL client (e.g., pgAdmin or psql).
+- Create Database:
+ ```bash
+   CREATE DATABASE "libraryBase"
+   ```
+- Then run `src/main/resources/libraryBase.sql`
+
+**3. Configure PostgreSQL connection as per your installation**
+
+- Open `src/main/resources/application.properties`
+- Update `spring.datasource.username` and `spring.datasource.password` to your PostgreSQL configuration.
+  
+**4. Run the app using Maven**
+
+  ```bash
+  mvn spring-boot:run
   ```
+The app will start running at <http://localhost:8080>
 
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/PeepStar/library-users-app.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
