@@ -213,10 +213,10 @@ Test them using postman or any other rest client.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Add Spring Security
+- [ ] Add dynamic usages for role specific fields (e.g., currentBooks, department)
+- [ ] Add JWT 
+- [ ] Documentation(Swagger)
 
 See the [open issues](https://github.com/PeepStar/library-users-app/issues) for a full list of proposed features (and known issues).
 
@@ -238,9 +238,11 @@ Project Link: [https://github.com/PeepStar/library-users-app](https://github.com
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Spring Boot, Hibernate and RESTful design](https://www.udemy.com/course/spring-hibernate-tutorial/?couponCode=24T4FS22124)
+* [MapStruct short course](https://www.youtube.com/watch?v=QvHIdeyPEp4&list=PL0JApyQA7yT4W7Q8a9mZRCopGj1oJEopo)
+* [ChatGPT](https://chat.openai.com/)
+* [Hibernate Inheritance](https://www.baeldung.com/hibernate-inheritance)
+* [REST exception handling](https://www.baeldung.com/exception-handling-for-rest-with-spring)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
