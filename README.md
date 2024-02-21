@@ -9,9 +9,8 @@
 
 
 <h1 align="center">Library Users REST API</h1>
-  
   <p align="center">
-    REST API powered by Spring Boot and PostgreSQL for retrieving library users
+    <strong>Spring Boot, PostgreSQL, JPA, MapStruct, Rest API</strong>
     <br />
     <a href="https://github.com/PeepStar/library-users-app"><strong>Explore the docs »</strong></a>
     <br />
@@ -54,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A refined REST API crafted for seamless user management. Engineered for scalability and simplicity in every interaction.
+Build Restful CRUD API for library users(Members & Librarians). Engineered for scalability and simplicity 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,9 +137,74 @@ The app will start running at <http://localhost:8080>
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The app defines following CRUD APIs.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### LibraryUsers
+
+| Method | Url | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| GET    | /api/libraryusers | Get all library users present in Database | |
+| GET    | /api/libraryusers/{userId} | Get library user (Librarian or Member) based on ID | |
+| POST    | /api/libraryusers | Create a new Librarian or Member(based on userRole)  | [JSON](#newuser) |
+| DELETE  | /api/libraryusers/{userId} | Delete library user base on ID  | |
+
+### Librarian
+
+| Method | Url | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| PUT    | /api/libraryusers/librarian/{userId} | Update any allowed fields for specified Librarian | [JSON](#librarianupdate) |
+
+### Member
+
+| Method | Url | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| PUT    | /api/libraryusers/member/{userId} | Update any allowed fields for specified Member | [JSON](#memberupdate) |
+
+Test them using postman or any other rest client.
+
+## Sample Valid JSON Request Bodys
+
+##### <a id="newuser">Create user -> /api/libraryusers/librarian/{userId}</a>
+1. Member
+```json
+{
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "dateOfBirth": "1990-01-01",
+  "phoneNumber": "1234567890",
+  "address": "123 Main St",
+  "userRole": "MEMBER"
+}
+```
+2. Librarian (Note that address is not a mandatory field)
+```json
+{
+  "fullName": "Alice Smith",
+  "email": "alice.smith@example.com",
+  "dateOfBirth": "1985-05-15",
+  "phoneNumber": "9876543210",
+  "userRole": "LIBRARIAN"
+}
+```
+
+##### <a id="librarianupdate">Update Librarian -> /api/libraryusers/librarian/{userId}</a>
+```json
+{
+  "fullName" : "Nimona flowers",
+  "email" : "nimona_flowers@gmail.com",
+  "phoneNumber": "5556667777"
+}
+```
+
+##### <a id="memberupdate">Update Member-> /api/libraryusers/member/{userId}</a>
+```json
+{
+  "fullName" : "Paul Yorke",
+  "dateOfBirth" : "1977-12-30",
+  "address" : "345 Side St house 2"
+}
+```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,25 +221,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 See the [open issues](https://github.com/PeepStar/library-users-app/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 
@@ -213,7 +258,6 @@ Project Link: [https://github.com/PeepStar/library-users-app](https://github.com
 [issues-url]: https://github.com/PeepStar/library-users-app/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/julian-peña-java
-[product-screenshot]: images/screenshot.png
 [SpringBoot.java]: https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=Spring&logoColor=white
 [SpringBoot-url]: https://spring.io/projects/spring-boot
 [Java.java]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
