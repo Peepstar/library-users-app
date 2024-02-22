@@ -113,9 +113,13 @@ This guide will help you set up and run the REST API locally on your machine.
 - Open your PostgreSQL client (e.g., pgAdmin or psql).
 - Create Database:
  ```bash
-   CREATE DATABASE "libraryBase"
+   CREATE DATABASE libraryBase;
    ```
-- Then run `src/main/resources/libraryBase.sql`
+- Connect to Database:
+```bash
+   \c libraryBase;
+   ```
+- Then run `src/main/resources/library-base.sql`
 
 **3. Configure PostgreSQL connection as per your installation**
 
