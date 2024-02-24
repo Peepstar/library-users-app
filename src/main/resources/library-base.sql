@@ -6,7 +6,7 @@ CREATE TABLE library_users(
    email VARCHAR(45) NOT NULL UNIQUE,
    date_of_birth DATE NOT NULL,
    address VARCHAR(255),
-   phone_number VARCHAR(45),
+   phone_number VARCHAR(10),
    registration_date TIMESTAMP NOT NULL,
    user_role VARCHAR(10) NOT NULL
 );

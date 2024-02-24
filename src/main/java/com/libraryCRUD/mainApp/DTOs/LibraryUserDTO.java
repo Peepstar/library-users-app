@@ -9,9 +9,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 //DTO to entry new entities and show a libraryUsers list
-public class LibraryUserDTO implements UserDTO {
+public class LibraryUserDTO {
     @Pattern(regexp = "[a-zA-Z\s]+", message = "Name must contain only letters")
-    @Size(max = 45, message = "Name can not be longer than 255 characters")
+    @Size(max = 45, message = "Name can not be longer than 45 characters")
     @NotNull(message = "Name can not be null")
     private String fullName;
     @NotNull(message = "Email can not be null")
@@ -25,7 +25,7 @@ public class LibraryUserDTO implements UserDTO {
     @Pattern(regexp = "^[0-9]*$", message = "Phone number must contain only numbers")
     @Size(min = 10, max = 10, message = "Phone number has to be 10 digit long")
     private String phoneNumber;
-
+    @Size(max = 255, message = "Address can not be longer than 255 characters long")
     private String address;
     //So far eNum is taking care of Validation for member or librarian but subject to change
     @NotNull(message = "userRole can not be null")

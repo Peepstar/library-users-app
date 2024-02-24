@@ -18,12 +18,10 @@ import java.util.List;
 @RequestMapping("/api")
 public class LibraryUserController {
 
-    //create a private field for DAO object
+    //Create a libraryService private field for autowired injection
     private final LibraryService libraryService;
 
-
-
-    //Inject LibraryRepository object into private field
+    //Inject LibraryService object into private field
     @Autowired
     public LibraryUserController(LibraryService theLibraryService){
         libraryService = theLibraryService;

@@ -25,7 +25,7 @@ public class LibraryServiceImpl implements LibraryService{
 
     //Repository field for dependency injection
     private final LibraryRepository libraryRepository;
-    //Mapper fields for dependency injection
+    //Mapper field for dependency injection
     private final LibraryUserMapper libraryUserMapper;
 
 
@@ -140,9 +140,6 @@ public class LibraryServiceImpl implements LibraryService{
         return libraryUserMapper.toMemberDTO((Member) updatedMember);
     }
 
-
-    //Helper methods
-;
 
 
 

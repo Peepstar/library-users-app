@@ -25,7 +25,7 @@ public abstract class LibraryUser {
     @Column(name = "email", columnDefinition = "VARCHAR(45) NOT NULL UNIQUE")
     private String email;
 
-    @Column(name = "date_of_birth", nullable = false)
+    @Column(name = "date_of_birth", columnDefinition = "DATE NOT NULL")
     private LocalDate dateOfBirth;
 
     @Column(name = "address", columnDefinition = "VARCHAR(255)")
@@ -34,7 +34,7 @@ public abstract class LibraryUser {
     @Column(name = "phone_number", columnDefinition = "VARCHAR(10)")
     private String phoneNumber;
 
-    @Column(name = "registration_date", nullable = false)
+    @Column(name = "registration_date", columnDefinition = "TIMESTAMP NOT NULL")
     private LocalDateTime registrationDate;
 
     @Column(name = "user_role", insertable = false, updatable = false)

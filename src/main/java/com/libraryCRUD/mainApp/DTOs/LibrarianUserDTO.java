@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class LibrarianUserDTO implements UserDTO{
     @Pattern(regexp = "[a-zA-Z\s]+", message = "Name must contain only letters")
-    @Size(max = 255, message = "Name can not be longer than 255 characters")
+    @Size(max = 45, message = "Name can not be longer than 45 characters")
     private String fullName;
     @Email(message = "Email address has to be in a correct format")
     private String email;
@@ -16,6 +16,7 @@ public class LibrarianUserDTO implements UserDTO{
     @Pattern(regexp = "^[0-9]*$", message = "Phone number must contain only numbers")
     @Size(min = 10, max = 10, message = "Phone number has to be 10 digit long")
     private String phoneNumber;
+    @Size(max = 255, message = "Address can not be longer than 255 characters long")
     private String address;
     //Librarian specific fields
     @Pattern(regexp = "^[a-zA-Z]+$", message = "WorkShift must contain only letters")
