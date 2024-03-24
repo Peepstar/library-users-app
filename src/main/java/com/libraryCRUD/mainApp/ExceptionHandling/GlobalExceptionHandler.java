@@ -1,11 +1,6 @@
 package com.libraryCRUD.mainApp.ExceptionHandling;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import com.libraryCRUD.mainApp.entities.Role;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.validation.ConstraintViolationException;
-import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -42,7 +37,7 @@ public class GlobalExceptionHandler {
         BadInputErrorResponse errorResponse = new BadInputErrorResponse();
 
         errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
-        errorResponse.setMessage(exc.getFieldError().getDefaultMessage()); //Default message is set up to be a String
+        errorResponse.setMessage(exc.getFieldError().getDefaultMessage()); //Default message is set up to be a String so no null will be returned
         errorResponse.setTimeStamp(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         //If null is passed in for field, we just set up Rejected value to null
         if(exc.getFieldError().getRejectedValue() == null){

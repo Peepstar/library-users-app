@@ -1,12 +1,11 @@
 package com.libraryCRUD.mainApp.DTOs;
 
-import com.libraryCRUD.mainApp.entities.Role;
+import com.libraryCRUD.mainApp.enums.Role;
 import jakarta.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 //DTO to entry new entities and show a libraryUsers list
 public class LibraryUserDTO {
@@ -17,6 +16,9 @@ public class LibraryUserDTO {
     @NotNull(message = "Email can not be null")
     @Email(message = "Email address has to be in a correct format")
     private String email;
+
+    @NotNull(message = "Password can not be null")
+    private String password;
     //This field is not provided by user
     private String registrationDate;
     @NotNull(message = "Date of birth can not be null")
@@ -47,6 +49,10 @@ public class LibraryUserDTO {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
 
     public String getRegistrationDate() {
         return registrationDate;

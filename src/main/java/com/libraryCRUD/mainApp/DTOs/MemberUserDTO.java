@@ -1,12 +1,10 @@
 package com.libraryCRUD.mainApp.DTOs;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.libraryCRUD.mainApp.entities.Role;
 import jakarta.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 public class MemberUserDTO implements UserDTO{
 
     @Pattern(regexp = "[a-zA-Z\s]+", message = "Name must contain only letters")
