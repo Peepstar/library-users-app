@@ -6,10 +6,8 @@ import com.libraryCRUD.mainApp.DTOs.MemberUserDTO;
 import com.libraryCRUD.mainApp.entities.Librarian;
 import com.libraryCRUD.mainApp.entities.LibraryUser;
 import com.libraryCRUD.mainApp.entities.Member;
-import com.libraryCRUD.mainApp.entities.Role;
 import org.mapstruct.*;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
