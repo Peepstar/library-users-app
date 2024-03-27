@@ -16,34 +16,34 @@ import java.util.stream.Collectors;
 @Entity
 @DiscriminatorValue("MEMBER")
 public class Member extends LibraryUser {
-
     @Column(name = "membership_active")
     private Boolean membershipActive;
-
     @Column(name = "current_books")
     private Integer currentBooks;
+
+
+    //Getters and setters
 
     public Boolean getMembershipActive() {
         return membershipActive;
     }
-
     public void setMembershipActive(Boolean membershipActive) {
         this.membershipActive = membershipActive;
     }
-
     public Integer getCurrentBooks() {
         return currentBooks;
     }
-
     public void setCurrentBooks(Integer currentBooks) {
         this.currentBooks = currentBooks;
     }
-
+    
+    
+    //Constructors
+    
     public Member() {
         this.currentBooks = 0; // Set default value for currentBooks
         this.membershipActive = false;
     }
-
     public Member(Boolean membershipActive, Integer currentBooks) {
         this.membershipActive = membershipActive;
         this.currentBooks = currentBooks;
@@ -51,6 +51,7 @@ public class Member extends LibraryUser {
 
 
     //Security methods
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = getUserRole().getPermissionsList().stream()
@@ -61,29 +62,25 @@ public class Member extends LibraryUser {
 
         return authorities;
     }
-
     @Override
     public String getUsername() {
         return getEmail();
     }
-
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
-
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
-
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
-
     @Override
     public boolean isEnabled() {
         return true;
     }
+
 }

@@ -14,7 +14,7 @@ public interface LibraryService {
 
     LibraryUser findById(Long theId);
 
-    LibraryUserDTO saveLibraryUser(LibraryUserDTO theUserDTO);
+    UserDTO saveLibraryUser(LibraryUserDTO theUserDTO);
 
     boolean deleteById(Long theId);
 
@@ -22,8 +22,8 @@ public interface LibraryService {
 
     LibraryUser convertToUser(LibraryUserDTO theUserDTO);
 
-    LibrarianUserDTO updateLibrarianUser(Long userId, LibrarianUserDTO theLibrarianDTO);
+    UserDTO updateLibrarianUser(Long userId, LibrarianUserDTO theLibrarianDTO);
 
-    MemberUserDTO updateMemberUser(Long userId, MemberUserDTO theMemberDTO);
+    UserDTO updateMemberUser(Long userId, MemberUserDTO theMemberDTO);
 
 }

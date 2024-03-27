@@ -16,28 +16,28 @@ import java.util.stream.Collectors;
 @Entity
 @DiscriminatorValue("LIBRARIAN")
 public class Librarian extends LibraryUser {
-
     @Column(name = "work_shift")
     private String workShift;
     ///PENDING FOR CHANGES
     @Column(name = "department")
     private String department;
 
+    //Getters and setters
     public String getWorkShift() {
         return workShift;
     }
-
     public void setWorkShift(String workShift) {
         this.workShift = workShift;
     }
-
     public String getDepartment() {
         return department;
     }
-
     public void setDepartment(String department) {
         this.department = department;
     }
+
+
+    //Constructors
 
     public Librarian(String workShift, String department) {
         this.workShift = workShift;
@@ -49,7 +49,8 @@ public class Librarian extends LibraryUser {
         this.department = "DefaultDepartment"; // Set default value for department
     }
 
-    ///Security methods
+
+    //Security methods
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = getUserRole().getPermissionsList().stream()
@@ -60,31 +61,27 @@ public class Librarian extends LibraryUser {
 
         return authorities;
     }
-
     @Override
     public String getUsername() {
         return getEmail();
     }
-
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
-
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
-
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
-
     @Override
     public boolean isEnabled() {
         return true;
     }
+
 }
 
 

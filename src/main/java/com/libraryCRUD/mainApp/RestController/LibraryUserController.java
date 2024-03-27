@@ -37,22 +37,21 @@ public class LibraryUserController {
         LibraryUser theLibraryUser = libraryService.findById(userId);
 
         return libraryService.convertToDTO(theLibraryUser);
-
     }
 
     @PostMapping("/libraryusers")
-    public LibraryUserDTO addLibraryUser(@Valid @RequestBody LibraryUserDTO newLibraryUserDTO){
+    public UserDTO addLibraryUser(@Valid @RequestBody LibraryUserDTO newLibraryUserDTO){
         //We save DTO sent from client to DB and return a DTO mapped from new entity
         return libraryService.saveLibraryUser(newLibraryUserDTO);
     }
 
     @PutMapping("/libraryusers/librarian/{userId}")
-    public LibrarianUserDTO updateLibrarianUser(@PathVariable Long userId, @Valid @RequestBody LibrarianUserDTO theLibrarianDTO) {
+    public UserDTO updateLibrarianUser(@PathVariable Long userId, @Valid @RequestBody LibrarianUserDTO theLibrarianDTO) {
         return libraryService.updateLibrarianUser(userId, theLibrarianDTO);
     }
 
     @PutMapping("/libraryusers/member/{userId}")
-    public MemberUserDTO updateMemberUser(@PathVariable Long userId, @Valid @RequestBody MemberUserDTO theMemberDTO){
+    public UserDTO updateMemberUser(@PathVariable Long userId, @Valid @RequestBody MemberUserDTO theMemberDTO){
         return libraryService.updateMemberUser(userId, theMemberDTO);
     }
 
