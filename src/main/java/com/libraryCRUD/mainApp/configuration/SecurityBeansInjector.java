@@ -1,6 +1,6 @@
 package com.libraryCRUD.mainApp.configuration;
 
-
+import com.libraryCRUD.mainApp.ExceptionHandling.LibraryUserNotFoundException;
 import com.libraryCRUD.mainApp.Repository.LibraryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,18 +13,18 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+// --> Beans for Spring Security <-- \\
 @Component
 public class SecurityBeansInjector {
-
-    @Autowired
+    @Autowired  // Repository field to findByEmail an UserDetailsService
     LibraryRepository libraryRepository;
 
-    @Bean
+    @Bean  // ProviderManager implements Authentication manager for injection
     AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager(); //ProviderManager implements Authentication manager
+        return authenticationConfiguration.getAuthenticationManager();
     }
 
-    @Bean
+    @Bean  // AuthenticationProvider for Users authentication
     AuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(userDetailsService());
@@ -32,17 +32,15 @@ public class SecurityBeansInjector {
         return provider;
     }
 
-    @Bean
+    @Bean  // Password encoder bean to encode password through application
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
+    @Bean  // User details service for authentication provider
     UserDetailsService userDetailsService(){
-        return userName -> {
-            return libraryRepository.findByEmail(userName).
-                    orElseThrow(() ->  new RuntimeException("User not found"));
-        };
+        return userName -> libraryRepository.findByEmail(userName).
+                orElseThrow(() ->  new LibraryUserNotFoundException("LibraryUser not found"));
     }
 
 }

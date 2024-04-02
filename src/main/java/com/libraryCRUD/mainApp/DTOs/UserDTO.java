@@ -1,7 +1,6 @@
 package com.libraryCRUD.mainApp.DTOs;
 
+// --> Interface to use polymorphism between LibraryUsers DTOs <-- \\
 public interface UserDTO {
-
-    //Interface to have use polymorphism for MEMBER and LIBRARIAN
-
+    String getEmail();
 }

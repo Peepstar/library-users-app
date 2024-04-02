@@ -1,49 +1,35 @@
 package com.libraryCRUD.mainApp.ExceptionHandling;
 
-public class LibraryUserErrorResponse {
-
-    //Fields
-
+// --> Error response for general cases or when no extra information is needed for an exception triggered <-- \\
+public class GenericErrorResponse {
     private int status;
-
     private String message;
-
     private String timeStamp;
 
-    //Constructors
 
-    public LibraryUserErrorResponse() {
+    // Constructors
+
+    public GenericErrorResponse() {
     }
 
-    public LibraryUserErrorResponse(int status, String message, String timeStamp) {
-        this.status = status;
-        this.message = message;
-        this.timeStamp = timeStamp;
-    }
 
-    //Getters and setters
+    //  Getters and setters
 
     public int getStatus() {
         return status;
     }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
+    public void setStatus(int status) { this.status = status; }
     public String getMessage() {
         return message;
     }
-
     public void setMessage(String message) {
         this.message = message;
     }
-
     public String getTimeStamp() {
         return timeStamp;
     }
-
     public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
     }
+
 }

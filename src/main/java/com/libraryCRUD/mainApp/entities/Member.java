@@ -1,18 +1,15 @@
 package com.libraryCRUD.mainApp.entities;
 
-import com.libraryCRUD.mainApp.enums.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// --> MEMBER entity that extends from Abstract LibraryUser <-- \\
 @Entity
 @DiscriminatorValue("MEMBER")
 public class Member extends LibraryUser {
@@ -22,7 +19,7 @@ public class Member extends LibraryUser {
     private Integer currentBooks;
 
 
-    //Getters and setters
+    //  Getters and setters
 
     public Boolean getMembershipActive() {
         return membershipActive;
@@ -38,10 +35,10 @@ public class Member extends LibraryUser {
     }
     
     
-    //Constructors
+    //  Constructors
     
     public Member() {
-        this.currentBooks = 0; // Set default value for currentBooks
+        this.currentBooks = 0;
         this.membershipActive = false;
     }
     public Member(Boolean membershipActive, Integer currentBooks) {
@@ -50,7 +47,7 @@ public class Member extends LibraryUser {
     }
 
 
-    //Security methods
+    //  Security methods
     
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

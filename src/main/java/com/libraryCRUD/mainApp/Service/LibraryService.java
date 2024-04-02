@@ -4,6 +4,7 @@ import com.libraryCRUD.mainApp.DTOs.LibrarianUserDTO;
 import com.libraryCRUD.mainApp.DTOs.LibraryUserDTO;
 import com.libraryCRUD.mainApp.DTOs.MemberUserDTO;
 import com.libraryCRUD.mainApp.DTOs.UserDTO;
+import com.libraryCRUD.mainApp.ExceptionHandling.DuplicatedEmailException;
 import com.libraryCRUD.mainApp.entities.LibraryUser;
 
 import java.util.List;
@@ -14,13 +15,11 @@ public interface LibraryService {
 
     LibraryUser findById(Long theId);
 
-    UserDTO saveLibraryUser(LibraryUserDTO theUserDTO);
+    UserDTO saveLibraryUser(LibraryUserDTO theUserDTO) throws DuplicatedEmailException;
 
     boolean deleteById(Long theId);
 
     UserDTO convertToDTO(LibraryUser theUser);
-
-    LibraryUser convertToUser(LibraryUserDTO theUserDTO);
 
     UserDTO updateLibrarianUser(Long userId, LibrarianUserDTO theLibrarianDTO);
 

@@ -3,6 +3,7 @@ package com.libraryCRUD.mainApp.enums;
 import java.util.Arrays;
 import java.util.List;
 
+// --> Roles for LibraryUsers. It allows single table inheritance in database and provide permissions based on Role <-- \\
 public enum Role {
     MEMBER(Arrays.asList(Permissions.READ_ONE_USER, Permissions.UPDATE_ONE_USER)),
 
@@ -21,4 +22,5 @@ public enum Role {
     public void setPermissionsList(List<Permissions> permissionsList) {
         this.permissionsList = permissionsList;
     }
+
 }

@@ -1,11 +1,12 @@
 package com.libraryCRUD.mainApp.DTOs;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.libraryCRUD.mainApp.enums.Role;
 import jakarta.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import java.time.LocalDate;
 
+// --> DTO to persist in database and show data to user (only MEMBER) <-- \\
 public class MemberUserDTO implements UserDTO{
     @Pattern(regexp = "[a-zA-Z\s]+", message = "Name must contain only letters")
     @Size(max = 45, message = "Name can not be longer than 45 characters")
@@ -19,19 +20,20 @@ public class MemberUserDTO implements UserDTO{
     @Pattern(regexp = "^[0-9]*$", message = "Phone number must contain only numbers")
     @Size(min = 10, max = 10, message = "Phone number has to be 10 digit long")
     private String phoneNumber;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @NotNull(message = "Password can not be null")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) //  Field is only available to be UPDATED but not to be READ
     private String password;
-
-    //Fields that only belong to Member class
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY) //  Field is only available to be READ but not to be UPDATED
+    private Role userRole;
+    //  Fields that only belong to Member class
     private Boolean membershipActive;
     private Integer currentBooks;
 
 
-    //Setters and getters
+    //  Setters and getters
 
     public String getFullName() { return fullName; }
     public void setFullName(String fullName) { this.fullName = fullName; }
+    @Override
     public String getEmail() {
         return email;
     }
@@ -60,6 +62,8 @@ public class MemberUserDTO implements UserDTO{
         return membershipActive;
     }
     public String getPassword() { return password; }
+    public Role getUserRole() { return userRole; }
+    public void setUserRole(Role userRole) { this.userRole = userRole; }
     public void setPassword(String password) { this.password = password; }
     public void setMembershipActive(Boolean membershipActive) {
         this.membershipActive = membershipActive;
@@ -70,7 +74,7 @@ public class MemberUserDTO implements UserDTO{
     public void setCurrentBooks(Integer currentBooks) { this.currentBooks = currentBooks; }
 
 
-    //Constructors
+    //  Constructors
 
     public MemberUserDTO() {
         // Default constructor

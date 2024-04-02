@@ -95,6 +95,7 @@ public abstract class LibraryUser implements UserDetails  {
     public void setUserRole(Role userRole) {
         this.userRole = userRole;
     }
+    @Override
     public String getPassword() { return password; }  //getPassword method satisfy override from UserDetails. No need to implement it in sub-classes
     public void setPassword(String password) {
         this.password = password;

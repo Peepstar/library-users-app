@@ -1,18 +1,15 @@
 package com.libraryCRUD.mainApp.entities;
 
-import com.libraryCRUD.mainApp.enums.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// --> LIBRARIAN entity that extends from Abstract LibraryUser <-- \\
 @Entity
 @DiscriminatorValue("LIBRARIAN")
 public class Librarian extends LibraryUser {
@@ -22,7 +19,8 @@ public class Librarian extends LibraryUser {
     @Column(name = "department")
     private String department;
 
-    //Getters and setters
+
+    //  Getters and setters
     public String getWorkShift() {
         return workShift;
     }
@@ -37,7 +35,7 @@ public class Librarian extends LibraryUser {
     }
 
 
-    //Constructors
+    //  Constructors
 
     public Librarian(String workShift, String department) {
         this.workShift = workShift;
@@ -50,7 +48,8 @@ public class Librarian extends LibraryUser {
     }
 
 
-    //Security methods
+    //  Security methods
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = getUserRole().getPermissionsList().stream()
