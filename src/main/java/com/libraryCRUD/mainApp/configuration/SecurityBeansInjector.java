@@ -1,7 +1,7 @@
 package com.libraryCRUD.mainApp.configuration;
 
-import com.libraryCRUD.mainApp.ExceptionHandling.LibraryUserNotFoundException;
-import com.libraryCRUD.mainApp.Repository.LibraryRepository;
+import com.libraryCRUD.mainApp.exceptionhandling.exceptions.LibraryUserNotFoundException;
+import com.libraryCRUD.mainApp.repository.LibraryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;

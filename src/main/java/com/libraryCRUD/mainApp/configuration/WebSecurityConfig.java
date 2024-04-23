@@ -28,14 +28,12 @@ public class WebSecurityConfig {
                 .sessionManagement(sessionMngConfig -> sessionMngConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)
                 .authorizeHttpRequests( auth -> {
-                    auth.requestMatchers(HttpMethod.GET, "/api/libraryusers/**").hasAuthority(Permissions.READ_ONE_USER.name());
-                    auth.anyRequest().permitAll();
-                   /* auth.requestMatchers(HttpMethod.GET, "/api/libraryusers").permitAll();
+                   auth.requestMatchers(HttpMethod.GET, "/api/libraryusers").permitAll();
                     auth.requestMatchers("/error").permitAll();
                     auth.requestMatchers(HttpMethod.GET, "/api/libraryusers/**").hasAuthority(Permissions.READ_ONE_USER.name());
                     auth.requestMatchers(HttpMethod.POST, "/api/libraryusers").hasAuthority(Permissions.CREATE_ONE_USER.name());
                     auth.requestMatchers(HttpMethod.PUT, "/api/libraryusers/**").hasAuthority(Permissions.UPDATE_ONE_USER.name());
-                    auth.requestMatchers(HttpMethod.DELETE, "/api/libraryusers/**").hasAuthority(Permissions.DELETE_ONE_USER.name()); */
+                    auth.requestMatchers(HttpMethod.DELETE, "/api/libraryusers/**").hasAuthority(Permissions.DELETE_ONE_USER.name());
                 })
                 .httpBasic(withDefaults())
                 .formLogin(withDefaults())
