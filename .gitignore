@@ -20,22 +20,12 @@ target/
 *.ipr
 /out/
 
-### NetBeans ###
-/nbproject/private/ff
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
 
 ####   Maven  ####
 mvnw
 mvnw.cmd
+.mvn/wrapper/
+
 
 **/target/
 pom.xml.tag
