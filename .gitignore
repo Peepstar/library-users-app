@@ -1,7 +1,4 @@
-HELP.md
-target/
-!**/src/main/**/target/
-!**/src/test/**/target/
+.mvn/wrapper/
 
 ### STS ###
 .apt_generated
@@ -23,9 +20,6 @@ target/
 ####   Maven  ####
 mvnw
 mvnw.cmd
-.mvn/wrapper/
-
-
 **/target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -44,3 +38,7 @@ buildNumber.properties
 
 # Log file
 *.log
+
+HELP.md
+!**/src/main/**/target/
+!**/src/test/**/target/
