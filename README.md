@@ -8,9 +8,9 @@
 
 
 
-<h1 align="center">Library Users REST API</h1>
+<h1 align="center">Library Users - Seminaries REST API</h1>
   <p align="center">
-    <strong>Spring Boot, PostgreSQL, JPA, MapStruct, Rest API</strong>
+    <strong>Spring Boot, Spring Security, Spring Data, PostgreSQL, JPA, MapStruct, Rest API</strong>
     <br />
     <a href="https://github.com/PeepStar/library-users-app"><strong>Explore the docs »</strong></a>
     <br />
@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Build Restful CRUD API for library users(Members & Librarians). Engineered for scalability and simplicity 
+Restful CRUD API for library users(Members & Librarians) and Seminars to create relationships between entities. Engineered for scalability and simplicity 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,6 +62,7 @@ Build Restful CRUD API for library users(Members & Librarians). Engineered for s
 ### Built With
 
 * [![SpringBoot][SpringBoot.java]][SpringBoot-url]
+* [![SpringSecurity][SpringSecurity.java]][SpringSecurity-url]
 * [![Java][Java.java]][Java-url]
 * [![PostgreSQL][PostgreSQL.sql]][PostgreSQL-url]
 * [![Hibernate][Hibernate.java]][Hibernate-url]
@@ -266,6 +267,8 @@ Project Link: [https://github.com/PeepStar/library-users-app](https://github.com
 [linkedin-url]: https://linkedin.com/in/julian-peña-java
 [SpringBoot.java]: https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=Spring&logoColor=white
 [SpringBoot-url]: https://spring.io/projects/spring-boot
+[SpringSecurity.java]: https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white
+[SpringSecurity-url]: https://spring.io/projects/spring-security
 [Java.java]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
 [Java-url]: https://www.java.com/es/
 [PostgreSQL.sql]: https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white
